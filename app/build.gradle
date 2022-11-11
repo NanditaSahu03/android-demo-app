@@ -64,4 +64,11 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 }
 
+sonarqube {
+    properties {
+        property "sonar.projectKey", "android-app"
+        property "sonar.projectName", "android-app"
+    }
+}
+
 apply from: "$rootProject.rootDir/scripts/move-apk.gradle"
