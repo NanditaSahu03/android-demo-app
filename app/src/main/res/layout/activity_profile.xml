@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="0dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5">
+
+        <LinearLayout
+            android:id="@+id/name_components"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/greetings"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="24dp"
+                android:text="Hello..." />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/labelCountry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="none"
+                android:text="Country" />
+
+            <EditText
+                android:id="@+id/country"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="Enter your country"
+                android:imeOptions="flagNoExtractUi"
+                android:inputType="textNoSuggestions"
+                tools:layout_conversion_absoluteHeight="42dp"
+                tools:layout_conversion_absoluteWidth="0dp"
+                tools:layout_conversion_absoluteX="8dp"
+                tools:layout_conversion_absoluteY="50dp"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="50dp" />
+
+            <TextView
+                android:id="@+id/labelAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="none"
+                android:text="Address" />
+
+            <EditText
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="Enter your address"
+                android:imeOptions="flagNoExtractUi"
+                android:inputType="textPostalAddress"
+                tools:layout_conversion_absoluteHeight="42dp"
+                tools:layout_conversion_absoluteWidth="0dp"
+                tools:layout_conversion_absoluteX="8dp"
+                tools:layout_conversion_absoluteY="50dp"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="50dp" />
+
+            <TextView
+                android:id="@+id/labelEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="none"
+                android:text="Email" />
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="Enter your email"
+                android:imeOptions="flagNoExtractUi"
+                android:inputType="textEmailAddress"
+                tools:layout_conversion_absoluteHeight="42dp"
+                tools:layout_conversion_absoluteWidth="0dp"
+                tools:layout_conversion_absoluteX="8dp"
+                tools:layout_conversion_absoluteY="50dp"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="50dp" />
+
+            <TextView
+                android:id="@+id/labelPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="none"
+                android:text="Phone Number" />
+
+            <EditText
+                android:id="@+id/phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="Enter your phone number"
+                android:imeOptions="flagNoExtractUi"
+                android:inputType="phone"
+                tools:layout_conversion_absoluteHeight="42dp"
+                tools:layout_conversion_absoluteWidth="0dp"
+                tools:layout_conversion_absoluteX="8dp"
+                tools:layout_conversion_absoluteY="50dp"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="50dp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/saved"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:visibility="gone"
+                android:textColor="#FF0000"
+                android:text="Profile Saved" />
+
+            <LinearLayout
+                android:id="@+id/buttons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/save"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:elevation="0dp"
+                    android:onClick="performSave"
+                    android:text="Save" />
+
+                <Button
+                    android:id="@+id/logout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:elevation="0dp"
+                    android:onClick="performLogout"
+                    android:text="Logout" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
