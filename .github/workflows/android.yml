@@ -56,10 +56,10 @@ jobs:
           restore-keys: ${{ runner.os }}-gradle
           
     - name: Code Scan Analysis - SonarQube
-      env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
-      run: ./gradlew sonarqube -Dsonar.projectKey=android-app 
+      run: ./gradlew sonarqube \
+              -Dsonar.projectKey=android-app \
+              -Dsonar.host.url=${{ secrets.SONAR_TOKEN }} \
+              -Dsonar.login=${{ secrets.SONAR_HOST_URL }}
       
     - name: Date and Time
       run: echo "::set-output name=current_date_time::$(date +"%d-%m-%Y-%H-%I-%M-%S")"
